@@ -1,29 +1,51 @@
 <template>
-    <component :is="dynamicAbout" />
-    {{ count}}
+  <div class="sidebar-page container bg-alice">
+    <div class="auto-container">
+      <div class="row">
+        <component :is="dynamicAbout" />
+        <component :is="dynamicRighSidebar" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import {computed,defineAsyncComponent,onMounted} from 'vue'
-import { useThemeStore } from '../stores/themeInfo';
+import { computed, defineAsyncComponent, onMounted, watch, ref } from 'vue'
+import { useThemeStore } from '../stores/themeInfo'
 import { storeToRefs } from 'pinia'
 
-const themeStore = useThemeStore();
+const themeStore = useThemeStore()
 
-const {theme} = storeToRefs(themeStore);
-const {fetchData} = themeStore;
+const { theme } = storeToRefs(themeStore)
+const { fetchData } = themeStore
+const dynamicAbout = ref(null);
+const dynamicRighSidebar = ref(null)
+console.log(theme, 'thesmaaaeaaaaa')
 
-console.log(theme,'thesmaaaeaaaaa')
 
-const dynamicAbout = computed(() =>
-  defineAsyncComponent(() => import(`../components/${theme.value}/about.vue`)) 
+
+watch(
+  theme,
+  (newValue, oldValue) => {
+    if (newValue) {
+      console.log(newValue, 'newVasslue')
+      dynamicAbout.value = defineAsyncComponent(() => import(`../components/${newValue}/about.vue`))
+      dynamicRighSidebar.value = defineAsyncComponent(() => import(`../components/${newValue}/rightSidebar.vue`))
+    }
+  },
+  { deep: true }
 )
 
-onMounted( async () => {
-  await fetchData();  
+// const dynamicAbout = defineAsyncComponent(() => import(`../components/${theme.value}/about.vue`))
+
+// const dynamicRighSidebar = defineAsyncComponent(() =>import(`../components/${theme.value}/rightSidebar.vue`))
+
+onMounted(async () => {
+  await fetchData();
+
+
 })
+
 </script>
 
-<style  scoped>
-
-</style>
+<style scoped></style>

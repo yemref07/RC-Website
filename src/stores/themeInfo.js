@@ -5,9 +5,8 @@ import axios from 'axios'
 
 export const useThemeStore = defineStore('themeStore', () => {
   const data = ref(null)
-  const theme = ref('default')
+  const theme = ref(null)
   const subdomain = ref(null)
-  const deneme = ref('deneme')
 
   const watchData = watch(data, (newValue, oldValue) => {
     theme.value = newValue.web_theme
@@ -15,7 +14,7 @@ export const useThemeStore = defineStore('themeStore', () => {
   })
 
   const extractSubdomain = () => {
-    const hostname = 'princess-guzellik-bakirkoy.rapp.com.tr'
+    const hostname = 'princess-guzellik-bakirkoy.rapp.com.tr/web'
     // const hostname = window.location.hostname;
 
     const parts = hostname.split('.')
@@ -39,6 +38,7 @@ export const useThemeStore = defineStore('themeStore', () => {
     try {
       const response = await instance.post(`${subdomain.value}`, instance)
       data.value = response.data
+      theme.value = response.data.web_theme
       console.log(data.value, 'api response')
     } catch (error) {
       console.error(error)
@@ -50,6 +50,6 @@ export const useThemeStore = defineStore('themeStore', () => {
     fetchData,
     extractSubdomain,
     watchData,
-    deneme
+    data
   }
 })
