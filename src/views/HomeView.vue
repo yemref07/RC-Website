@@ -18,33 +18,40 @@ const themeStore = useThemeStore()
 
 const { theme } = storeToRefs(themeStore)
 const { fetchData } = themeStore
-const dynamicAbout = ref(null);
-const dynamicRighSidebar = ref(null)
-console.log(theme, 'thesmaaaeaaaaa')
+
+console.log(theme, 'thesmaaaeaaaaaaa')
 
 
 
-watch(
-  theme,
-  (newValue, oldValue) => {
-    if (newValue) {
-      console.log(newValue, 'newVasslue')
-      dynamicAbout.value = defineAsyncComponent(() => import(`../components/${newValue}/about.vue`))
-      dynamicRighSidebar.value = defineAsyncComponent(() => import(`../components/${newValue}/rightSidebar.vue`))
-    }
-  },
-  { deep: true }
-)
-
-// const dynamicAbout = defineAsyncComponent(() => import(`../components/${theme.value}/about.vue`))
-
-// const dynamicRighSidebar = defineAsyncComponent(() =>import(`../components/${theme.value}/rightSidebar.vue`))
-
-onMounted(async () => {
+onMounted(async() => {
   await fetchData();
-
-
 })
+
+// const dynamicAbout = computed(()=>{
+//  return defineAsyncComponent(() => import(`../components/${selectedTheme.value}/about.vue`))
+// })
+
+// const dynamicRighSidebar =computed(()=>{
+//   return  defineAsyncComponent(() =>import(`../components/${selectedTheme.value}/rightSidebar.vue`))
+// })
+
+const dynamicRighSidebar= computed(() => {
+
+  if (theme.value) {
+    return defineAsyncComponent(() => import(`../components/${theme.value}/rightSidebar.vue`));
+  } else {
+    return null;
+  }
+});
+
+const dynamicAbout= computed(() => {
+
+  if (theme.value) {
+    return defineAsyncComponent(() => import(`../components/${theme.value}/about.vue`));
+  } else {
+    return null;
+  }
+});
 
 </script>
 
