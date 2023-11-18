@@ -15,25 +15,46 @@ const router = createRouter({
       component: () => import('../views/WorkingHours.vue')
     },
     {
-      path: '/müsteri-yorumlari',
+      path: '/musteri-yorumlari',
       name: 'müsteriYorumlari',
-      component: () => import('../views/CustomerComments.vue')
-
+      component: () => import('../views/CommentView.vue')
+    },
+    {
+      path: '/randevu-al',
+      name: 'randevuAl',
+      component: () => import('../views/GetAppView.vue')
+    },
+    {
+      path: '/randevu-onay',
+      name: 'randevuOnay',
+      component: () => import('../views/AppConfirmView.vue')
+    },
+    {
+      path: '/randevu-detay',
+      name: 'randevuDetay',
+      component: () => import('../views/AppDetailView.vue')
     },
     {
       path: '/hakkimizda',
       name: 'hakkimizda',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
-
     },
     {
-        path: '/iletisim',
-        name: 'iletisim',
-        component: () => import('../views/ContactView.vue')
-      },
+      path: '/iletisim',
+      name: 'iletisim',
+      component: () => import('../views/ContactView.vue')
+    },
+
+    {
+      path: '/404',
+      name: 'hataSayfasi',
+      component: () => import('../views/errorPage.vue')
+    },
+
+    {
+      path: '/:pathMatch(.*)*',
+      component: () => import('../views/errorPage.vue')
+    }
   ]
 })
 
