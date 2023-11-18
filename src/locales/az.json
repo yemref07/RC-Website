@@ -1,0 +1,192 @@
+{
+  "name": "Adınız",
+  "surname": "Soyadınız",
+  "nameSurname": "Adınız Soyadınız",
+  "phone": "Telefon",
+  "email": "E-Posta",
+  "close": "Bağla",
+  "confirm": "Təsdiq et",
+  "selectService": "Xidmət seçimi",
+  "appDate": "Randevu tarixi",
+  "error": "Səhv",
+  "success": "Uğurlu",
+  "ok": "Oldu",
+  "whatsApp": "WhatsApp",
+  "message": "Mesajınız",
+  "send": "Göndər",
+  "companyName": "Firma adı göstərilməyib",
+
+  "menu": {
+      "home": "Əsas Səhifə",
+      "aboutUs": "Haqqımızda",
+      "workHours": "İş saatları",
+      "customerReview": "Müştəri rəyləri",
+      "contact": "Əlaqə"
+  },
+
+  "buttons": {
+      "phone": "Telefon",
+      "getApp": "Randevu Al",
+      "getAppNow": "İndi Randevu Al",
+      "getFastApp": "Sürətli Randevu Al",
+      "sendMessage": "Mesaj Göndər",
+      "shareLoc": "Mənə ünvan paylaş",
+      "allReview": "Bütün rəylər",
+      "callNow": "İndi Zəng Et",
+      "readMore": "Ətraflı Oxu"
+  },
+
+  "botMenu": {
+      "getApp": "Randevu Al",
+      "wp": "WhatsApp",
+      "callNow": "İndi Zəng Et",
+      "contact": "Əlaqə"
+  },
+
+  "sections": {
+      "about": "Haqqımızda",
+      "serviceGallery": "Xidmət Qalereyası",
+      "popularServices": "Populyar Xidmətlər",
+      "services": "Xidmətlər",
+      "makeReview": "Rəy Yazın",
+      "map": "Xəritədə Baxın",
+      "videoGallery": "Video Qalereya",
+      "customerReview": "Müştəri Rəyləri"
+  },
+
+  "aboutUs": {
+      "title": "Haqqımızda",
+      "fallback": "Bu bizim iş üçün hələ haqqımızda mətni daxil edilməyib. Bu əməliyyatı etmək üçün randevu mərkəzi panelindən istifadə edərək veb saytınızı əyri mətnlərlə tənzimləyə vəziyyətdirsiniz."
+  },
+
+  "workHours": {
+      "title": "İş Saatlarımız",
+      "day": "Gün",
+      "opening": "Açılış",
+      "closing": "Bağlanış",
+      "days": [
+          "Bazar ertəsi",
+          "Çərşənbə axşamı",
+          "Çərşənbə",
+          "Cümə axşamı",
+          "Cümə",
+          "Şənbə",
+          "Bazar"
+      ],
+      "closed": "Bağlı",
+      "fallback": "Bu işə aid iş saatları hələ daxil edilməyib."
+  },
+
+  "customerReview": {
+      "title": "Müştəri Rəyləri",
+      "rating": "Reytinq",
+      "nameSurname": "Ad Soyad",
+      "phone": "Telefon",
+      "comment": "Şərhiniz",
+      "send": "Göndər",
+      "noReview": "Hələ rəy yazılmayıb",
+      "successMsg": "Mesajınız uğurla göndərildi",
+      "ok": "Oldu",
+      "loadMore": "Ətraflısını Yüklə",
+      "fallback": "Hələ bir rəy yazılmayıb",
+      "allReview": "Bütün Rəylər"
+  },
+
+  "contact": {
+      "title": "Əlaqə",
+      "section1": "Əlaqə Məlumatları",
+      "section2": "Bizə Ulaşın",
+      "success1": "Mesajınız uğurla göndərildi",
+      "error1": "Xahiş olunur, boş sahə qoymayın"
+  },
+
+  "serviceGallery": {
+      "noImage": "Hələ şəkil əlavə edilməyib"
+  },
+
+  "videoGallery": {
+      "fallback": "Hələ video əlavə edilməyib"
+  },
+
+  "fastApp": {
+      "error1": "Xahiş olunur, boş sahə qoymayın",
+      "success1": "'Randevu tələbiniz uğurla qəbul olundu, ən qısa zamanda sizə cavab verəcəyik'"
+  },
+
+  "mapSection": {
+      "title": "Xəritədə Baxın",
+      "fallback": "İş yerinə aid etibarlı bir ünvan hələ daxil edilməyib",
+      "sharelocPhone": "90 555 XX XX XX formatında yazın",
+      "share": "WhatsApp üzərindən paylaş"
+  },
+
+  "profileInfo": {
+      "error1": "Xahiş olunur, boş sahə qoymayın",
+      "success1": "Uğurla Göndərildi!"
+  },
+
+  "sendComment": {
+      "success1": "Şərhiniz uğurla göndərildi",
+      "error1": "Xahiş olunur, boş sahə qoymayın"
+  },
+
+  "appConfirm": {
+      "title": "Randevu Təsdiqi",
+      "services": "Xidmətlər",
+      "phoneText": "SMS ilə göndərdiyimiz şifrəni daxil edin.",
+      "appConfirmCode": "Randevu Təsdiq Kodu",
+      "contract1": "Mənə təşviqatlı mesaj göndərilsin",
+      "contract2": "İstifadə və gizlilik şərtlərini oxudum, təsdiqləyirəm",
+      "createApp": "Randevu Oluştur",
+      "appSummary": "Randevu Özəti",
+      "specialist": "Uzman",
+      "dateHour": "Tarix - Saat",
+      "error1": "Xahiş olunur, istifadəçi razılaşmalarını qəbul edin",
+      "error2": "Xahiş olunur, təsdiq kodunu daxil edin",
+      "success1": "Randevunuz uğurla yaradıldı"
+  },
+
+  "appDetail": {
+      "title": "Randevu Özəti",
+      "specialist": "Uzman",
+      "appInfo": "Randevu Məlumatları",
+      "services": "Xidmətlər",
+      "dateHour": "Tarix Saat",
+      "print": "Çap et",
+      "pdf": "PDF Yüklə"
+  },
+
+  "getApp": {
+      "title": "Randevu Al",
+      "selectService": "Xidmət Seçimi",
+      "selectSpecialist": "Uzman Seçimi",
+      "selectDate": "Tarix Seçimi",
+      "appDate": "Randevu Tarixi",
+      "today": "Bu gün",
+      "tomorrow": "Sabah",
+      "selectHour": "Saat Seçimi",
+      "appHour": "Randevu Saati",
+      "showAvaibleHour": "Uyğun Saatları Göstər",
+      "personalInfo": "Şəxsi Məlumatlar",
+      "mobilePhone": "Cib Telefon Nömrəniz",
+      "name": "Adınız",
+      "surname": "Soyadınız",
+      "cancel": "İmtina et",
+      "send": "Göndər",
+      "appSummary": "Randevu Özəti",
+      "services": "Xidmətlər",
+      "noServices": "Hələ bir xidmət seçilməyib",
+      "specialist": "Uzman",
+      "noSpecialist": "Hələ bir uzman seçilməyib",
+      "dateHour": "Tarix Saat",
+      "noDateHour": "Randevu üçün tarix-saat seçilməyib",
+      "error1": "Xahiş olunur, bir xidmət və uzman seçin",
+      "error2": "Təsdiq kodu göndərilərkən bir səhv baş verdi",
+      "error3": "Xahiş olunur, etibarlı bir telefon nömrəsi daxil edin",
+      "error4": "Təəssüf ki, seçilmiş tarixdə iş yerində xidmət verilmir",
+      "error5": "Seçilmiş tarixdə uyğun randevu tapılmadı, lütfən başqa bir tarixi sınayın",
+      "successText": "Təsdiq kodu müvafiq telefon nömrəsinə qısa mesaj kimi göndərildi",
+      "successTitle": "Təsdiq Kodu Göndərildi"
+  }
+}
+

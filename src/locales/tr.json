@@ -1,0 +1,193 @@
+{
+    "name":"Adınız",
+    "surname":"Soyadınız",
+    "nameSurname":"Adınız Soyadınız",
+    "phone":"Telefon",
+    "email":"E-Posta",
+    "close":"Kapat",
+    "confirm":"Onayla",
+    "selectService":"Hizmet Seçimi",
+    "appDate":"Randevu Tarihi",
+    "error":"Hata",
+    "success":"Başarılı",
+    "ok":"Tamam",
+    "whatsApp":"WhatsApp",
+    "message":"Mesajınız",
+    "send":"Gönder",
+    "companyName":"Firma İsmi Belirtilmedi",
+
+    "menu":{
+        "home":"Anasayfa",
+        "aboutUs":"Hakkımızda",
+        "workHours":"Çalışma Saatleri",
+        "customerReview":"Müşteri Yorumları",
+        "contact":"İletişim"
+    },
+
+    "buttons":{
+        "phone":"Telefon",
+        "getApp":"Randevu Al",
+        "getAppNow":"Hemen Randevu Al",
+        "getFastApp":"Hızlı Randevu Al",
+        "sendMessage":"Mesaj Gönder",
+        "shareLoc":"Konumu Benimle Paylaş",
+        "allReview":"Tüm Yorumlar",
+        "callNow":"Şimdi Ara",
+        "readMore":"Devamını Oku"      
+    },
+
+    "botMenu":{
+        "getApp":"Randevu Al",
+        "wp":"WhatsApp",
+        "callNow":"Şimdi Ara",
+        "contact":"İletişim"
+    },
+
+    "sections":{
+        "about":"Hakkımızda",
+        "serviceGallery":"Hizmet Galerisi",
+        "popularServices":"Popüler Hizmetler",
+        "services":"Hizmetler",
+        "makeReview":"Yorum Yap",
+        "map":"Haritada Görüntüle",
+        "videoGallery":"Video Galerisi",
+        "customerReview":"Müşteri Yorumları"
+    },
+
+    "aboutUs":{
+        "title":"Hakkımızda",
+        "fallback":"Bu işletme için henüz hakkımızda yazısı girilmemiş, bu işlemi randevu center panelini kullanarak gerçekleştirebilir daha birçok özellik ile web sitenizi özelleştirebilirsiniz"
+    },
+
+    "workHours":{
+        "title":"Çalışma Saatlerimiz",
+        "day":"Gün",
+        "opening":"Açılış",
+        "closing":"Kapanış",
+        "days":[
+            "Pazartesi",
+            "Salı",
+            "Çarşamba",
+            "Perşembe",
+            "Cuma",
+            "Cumartesi",
+            "Pazar"
+        ],
+        "closed":"Kapalı",
+        "fallback":"Bu işletmeya ait çalışma saatleri henüz girilmemiş"
+    },
+
+    "customerReview":{
+        "title":"Müşteri Yorumları",
+        "rating":"Puanlama",
+        "nameSurname":"Ad Soyad",
+        "phone":"Telefon",
+        "comment":"Yorumunuz",
+        "send":"Gönder",
+        "noReview":"Henüz Yorum Yapılmamış",
+        "successMsg":"Mesajınız Başarıyla Gönderildi",
+        "ok":"Tamam",
+        "loadMore":"Devamını Yükle",
+        "fallback":"Henüz bir yorum yapılmamış",
+        "allReview":"Tüm Yorumlar"   
+    },
+
+    "contact":{
+        "title":"İletişim",
+        "section1":"İletişim Bilgileri",
+        "section2":"Bize Ulaşın",
+        "success1":"Mesajınız Başarıyla Gönderildi",
+        "error1":"Lütfen Boş Alan Bırakmayın"
+    },
+
+    "serviceGallery":{
+        "noImage":"Henüz Resim Eklenmemiş"
+    },
+
+    "videoGallery":{
+        "fallback":"Henüz video eklenmemiş"
+    },
+
+
+    "fastApp":{
+        "error1":"Lütfen boş alan bırakmayınız",
+        "success1":"'Randevu talebiniz başarıyla alındı en kısa sürede size geri dönüş yapacağız'"
+    },
+
+    "mapSection":{
+        "title":"Haritada Görüntüle",
+        "fallback":"Henüz işletmeye ait geçerli bir adres girilmemiş",
+        "sharelocPhone":"90 555 XXX XX XX şeklinde yazınız",
+        "share":"WhatsApp Üzerinden Paylaş"
+    },
+
+    "profileInfo":{
+        "error1":"Lütfen Boş Alan Bırakmayın",
+        "success1":"Başarıyla Gönderildi!"
+    },
+
+    "sendComment":{
+        "success1":"Yorumunuz başarıyla gönderildi",
+        "error1":"Lütfen Boş Alan Bırakmayın"
+    },
+
+    "appConfirm":{
+        "title":"Randevu Onay",
+        "services":"Hizmetler",
+        "phoneText":"numaralı cep telefonunuza SMS ile gönderdiğimiz şifrenizi giriniz.",
+        "appConfirmCode":"Randevu Onay Kodu",
+        "contract1":"Kampanyalardan haberdar olmak için tarafıma ticari ileti gönderilsin",
+        "contract2":"Kullanım ve gizlilik koşullarını okudum, onaylıyorum",
+        "createApp":"Randevu Oluştur",
+        "appSummary":"Randevu Özeti",
+        "specialist":"Uzman",
+        "dateHour":"Tarih - Saat",
+        "error1":"Lütfen kullanıcı sözleşmelerini kabul edin",
+        "error2":"Lütfen doğrulama kodunu giriniz",
+        "success1":"Randevunuz başarıyla oluşturuldu"
+    },
+
+    "appDetail":{
+        "title":"Randevu Özeti",
+        "specialist":"Uzman",
+        "appInfo":"Randevu Bilgileri",
+        "services":"Hizmetler",
+        "dateHour":"Tarih Saat",
+        "print":"Yazdır",
+        "pdf":"PDF İndir"
+    },
+
+    "getApp":{
+        "title":"Randevu Al",
+        "selectService":"Hizmet Seçimi",
+        "selectSpecialist":"Uzman Seçimi",
+        "selectDate":"Tarih Seçimi",
+        "appDate":"Randevu Tarihi",
+        "today":"Bugün",
+        "tomorrow":"Yarın",
+        "selectHour":"Saat Seçimi",
+        "appHour":"Randevu Saati",
+        "showAvaibleHour":"Uygun Saatleri Göster",
+        "personalInfo":"Kişisel Bilgiler",
+        "mobilePhone":"Cep Telefonu Numaranız",
+        "name":"Adınız",
+        "surname":"Soyadınız",
+        "cancel":"İptal",
+        "send":"Gönder",
+        "appSummary":"Randevu Özeti",
+        "services":"Hizmetler",
+        "noServices":"Henüz bir hizmet seçilmedi",
+        "specialist":"Uzman",
+        "noSpecialist":"Henüz bir uzman seçilmedi",
+        "dateHour":"Tarih Saat",
+        "noDateHour":"Randevu için tarih-saat seçilmedi",
+        "error1":"Lütfen bir hizmet ve uzman seçiniz",
+        "error2":"Doğrulama kodu gönderilerken bir hata oluştu",
+        "error3":"Lütfen geçerli bir telefon numarası girin",
+        "error4":"Malesef işletme seçili tarihte hizmet vermemekte",
+        "error5":"Seçili tarihte uygun randevu bulunamadı lütfen başka bir tarih deneyin",
+        "successText":"Doğrulama kodu ilgili telefon numarasına kısa mesaj olarak illetildi",
+        "successTitle":"Doğrulama Kodu Gönderildi"
+        
+    }
+}

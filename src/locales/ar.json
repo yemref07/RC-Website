@@ -1,0 +1,63 @@
+{
+    "menu": {
+        "home": "الرئيسية",
+        "aboutUs": "معلومات عنا",
+        "workHours": "ساعات العمل",
+        "customerReview": "آراء العملاء",
+        "contact": "اتصل بنا"
+    },
+    "buttons": {
+        "phone": "الهاتف",
+        "getApp": "احجز الآن",
+        "getAppNow": "احجز الآن",
+        "sendMessage": "أرسل رسالة",
+        "shareLoc": "شارك الموقع",
+        "allReview": "جميع الآراء",
+        "callNow": "اتصل الآن"
+    },
+    "sections": {
+        "about": "معلومات عنا",
+        "serviceGallery": "معرض الخدمات",
+        "popularServices": "الخدمات الشهيرة",
+        "services": "الخدمات",
+        "makeReview": "أكتب تعليقًا",
+        "map": "عرض على الخريطة",
+        "videoGallery": "معرض الفيديو",
+        "customerReview": "آراء العملاء"
+    },
+    "aboutUs": {
+        "title": "معلومات عنا"
+    },
+    "workHours": {
+        "day": "اليوم",
+        "opening": "فتح",
+        "closing": "إغلاق",
+        "days": {
+            "1": "الاثنين",
+            "2": "الثلاثاء",
+            "3": "الأربعاء",
+            "4": "الخميس",
+            "5": "الجمعة",
+            "6": "السبت",
+            "7": "الأحد"
+        },
+        "close": "مغلق"
+    },
+    "customerReview": {
+        "title": "آراء العملاء",
+        "rating": "التقييم",
+        "nameSurname": "الاسم واللقب",
+        "phone": "الهاتف",
+        "comment": "تعليقك",
+        "send": "إرسال"
+    },
+    "contact": {
+        "title": "اتصل بنا",
+        "section1": "معلومات الاتصال",
+        "section2": "اتصل بنا",
+        "nameSurname": "الاسم واللقب",
+        "phone": "الهاتف",
+        "message": "رسالتك",
+        "send": "إرسال"
+    }
+}

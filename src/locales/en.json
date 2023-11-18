@@ -1,0 +1,191 @@
+{
+    "name": "Name",
+    "surname": "Surname",
+    "nameSurname": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "close": "Close",
+    "confirm": "Confirm",
+    "selectService": "Select Service",
+    "appDate": "Appointment Date",
+    "error": "Error",
+    "success": "Success",
+    "ok": "OK",
+    "whatsApp": "WhatsApp",
+    "message": "Your Message",
+    "send": "Send",
+    "companyName": "Company Name Not Specified",
+  
+    "menu": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "workHours": "Working Hours",
+      "customerReview": "Customer Reviews",
+      "contact": "Contact"
+    },
+  
+    "buttons": {
+      "phone": "Phone",
+      "getApp": "Make Appointment",
+      "getAppNow": "Make Appointment Now",
+      "getFastApp": "Quick Appointment",
+      "sendMessage": "Send Message",
+      "shareLoc": "Share Location with Me",
+      "allReview": "All Reviews",
+      "callNow": "Call Now",
+      "readMore": "Read More"
+    },
+  
+    "botMenu": {
+      "getApp": "Make Appointment",
+      "wp": "WhatsApp",
+      "callNow": "Call Now",
+      "contact": "Contact"
+    },
+  
+    "sections": {
+      "about": "About Us",
+      "serviceGallery": "Service Gallery",
+      "popularServices": "Popular Services",
+      "services": "Services",
+      "makeReview": "Make a Review",
+      "map": "View on Map",
+      "videoGallery": "Video Gallery",
+      "customerReview": "Customer Reviews"
+    },
+  
+    "aboutUs": {
+      "title": "About Us",
+      "fallback": "No information has been entered about this business yet. You can do this by using the appointment center panel and customize your website with many more features."
+    },
+  
+    "workHours": {
+      "title": "Working Hours",
+      "day": "Day",
+      "opening": "Opening",
+      "closing": "Closing",
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "closed": "Closed",
+      "fallback": "Working hours for this business have not been entered yet."
+    },
+  
+    "customerReview": {
+      "title": "Customer Reviews",
+      "rating": "Rating",
+      "nameSurname": "Full Name",
+      "phone": "Phone",
+      "comment": "Your Comment",
+      "send": "Send",
+      "noReview": "No reviews yet",
+      "successMsg": "Your message has been successfully sent",
+      "ok": "OK",
+      "loadMore": "Load More",
+      "fallback": "No reviews have been made yet"
+    },
+  
+    "contact": {
+      "title": "Contact",
+      "section1": "Contact Information",
+      "section2": "Get in Touch",
+      "success1": "Your message has been successfully sent",
+      "error1": "Please do not leave any fields blank"
+    },
+  
+    "serviceGallery": {
+      "noImage": "No images have been added yet"
+    },
+  
+    "videoGallery": {
+      "fallback": "No videos have been added yet"
+    },
+  
+    "fastApp": {
+      "error1": "Please do not leave any fields blank",
+      "success1": "'Your appointment request has been received successfully, we will get back to you as soon as possible'"
+    },
+  
+    "mapSection": {
+      "title": "View on Map",
+      "fallback": "No valid address has been entered for the business yet",
+      "sharelocPhone": "Enter as 90 555 XXX XX XX",
+      "share": "Share via WhatsApp"
+    },
+  
+    "profileInfo": {
+      "error1": "Please do not leave any fields blank",
+      "success1": "Successfully Sent!"
+    },
+  
+    "sendComment": {
+      "success1": "Your comment has been successfully sent",
+      "error1": "Please do not leave any fields blank"
+    },
+  
+    "appConfirm": {
+      "title": "Appointment Confirmation",
+      "services": "Services",
+      "phoneText": "Enter the password we sent to your mobile phone number via SMS.",
+      "appConfirmCode": "Appointment Confirmation Code",
+      "contract1": "Send me commercial messages to be informed about promotions",
+      "contract2": "I have read and accept the terms of use and privacy conditions",
+      "createApp": "Create Appointment",
+      "appSummary": "Appointment Summary",
+      "specialist": "Specialist",
+      "dateHour": "Date - Time",
+      "error1": "Please accept the user agreements",
+      "error2": "Please enter the verification code",
+      "success1": "Your appointment has been successfully created"
+    },
+  
+    "appDetail": {
+      "title": "Appointment Summary",
+      "specialist": "Specialist",
+      "appInfo": "Appointment Information",
+      "services": "Services",
+      "dateHour": "Date and Time",
+      "print": "Print",
+      "pdf": "Download PDF"
+    },
+  
+    "getApp": {
+      "title": "Make Appointment",
+      "selectService": "Select Service",
+      "selectSpecialist": "Select Specialist",
+      "selectDate": "Select Date",
+      "appDate": "Appointment Date",
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "selectHour": "Select Time",
+      "appHour": "Appointment Time",
+      "showAvaibleHour": "Show Available Hours",
+      "personalInfo": "Personal Information",
+      "mobilePhone": "Your Mobile Phone Number",
+      "name": "Name",
+      "surname": "Surname",
+      "cancel": "Cancel",
+      "send": "Send",
+      "appSummary": "Appointment Summary",
+      "services": "Services",
+      "noServices": "No service has been selected yet",
+      "specialist": "Specialist",
+      "noSpecialist": "No specialist has been selected yet",
+      "dateHour": "Date and Time",
+      "noDateHour": "No date and time selected for the appointment",
+      "error1": "Please select a service and specialist",
+      "error2": "There was an error sending the verification code",
+      "error3": "Please enter a valid phone number",
+      "error4": "Unfortunately, the business does not provide services on the selected date",
+      "error5": "No available appointment found on the selected date, please try another date",
+      "successText": "The verification code has been sent to the relevant phone number as a text message",
+      "successTitle": "Verification Code Sent"
+    }
+  }
+  
