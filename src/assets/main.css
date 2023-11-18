@@ -1,8 +1,125 @@
 @import './base.css';
-@import './css/bootstrap.css';
-@import './css/style.css';
-@import './css/custom.css';
-@import './css/responsive.css';
+@import './css/bootstrap.min.css';
+
+:root {  
+    --rblue:#0069ff;
+  }
+
+.bg-light-green{
+    background-color: #3caa36;
+}
+
+.bg-rblue{
+    background-color: var(--rblue);
+}
+
+.text-rblue{
+    color:var(--rblue);
+}
+
+*{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.card-content * {
+    max-width: 100;
+}
+
+.card-content {
+    transition:
+      box-shadow 0.25s linear,
+      -webkit-box-shadow 0.25s linear;
+    box-shadow: 0 10px 20px rgba(1, 14, 40, 0.1);
+    background-color: #fff;
+    padding: 20px;
+  }
 
 
+  .el-input__inner {
+    --el-input-inner-height: calc(var(--el-input-height, 32px) - 2px);
+    width: 100%;
+    flex-grow: 1;
+    -webkit-appearance: none;
+    color: var(--el-input-text-color,var(--el-text-color-regular));
+    font-size: inherit;
+    height: var(--el-input-inner-height);
+    line-height: var(--el-input-inner-height);
+    padding: 0px;
+    outline: 0;
+    border: none;
+    background: 0 0;
+    box-sizing: border-box;
+    height: 45px !important;
+    border-radius:20px !important;
+}
 
+.el-select-group__title {
+    padding-left: 20px;
+    font-size: 16px !important;
+    color: black !important;
+    line-height: 30px;
+    font-weight:500;
+}
+
+.modal-width{
+    width: 75%;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-width{
+      width: 90% !important;
+    }
+  }
+
+  .index-99{
+    z-index: 999 !important;
+  }
+
+  .btn-contact {
+    font-weight: 500;
+    border-width: 2px;
+    font-size:14px;
+  }
+
+  .mt-150{
+    margin-top:145px;
+  }
+
+  @media (max-width: 991px) {
+    .mt-150{
+      margin-top:120px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mt-150{
+      margin-top:80px;
+    }
+  }
+
+  .swal2-container{
+    z-index:9999 !important;
+  }
+
+  
+  div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: var(--rblue) !important;
+}
+
+
+.dp__action_button {
+  padding: 15px;
+}
+
+.section-title{
+  font-size:24px;
+}
+
+.main-title{
+  font-size:28px;
+}
+
+
+.swiper-button-next svg, .swiper-button-prev svg {
+    color: black !important;
+}
