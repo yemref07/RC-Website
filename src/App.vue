@@ -15,21 +15,23 @@ import { defineAsyncComponent, computed, onMounted, watch, ref } from 'vue'
 import { useThemeStore } from './stores/themeInfo'
 import { storeToRefs } from 'pinia'
 import { useRoute } from 'vue-router'
-import { useSeoMeta, useHead } from '@unhead/vue'
+import { useHead , useSeoMeta} from '@unhead/vue'
 
 const route = useRoute()
 const themeStore = useThemeStore()
-const { theme, data } = storeToRefs(themeStore)
+const { theme, title } = storeToRefs(themeStore)
 const { fetchData } = themeStore
 const is404 = ref('')
 
 const pageTitle = computed(() => {
-  if (data.value) {
-    return data.value.title
-  } else {
-    return 'Randevu Center | Anasayfa'
+  if (title.value) {
+    return title.value
+  } 
+  else {
+    return 'Default Page Title'
   }
 })
+
 
 useHead({
   meta: [
@@ -47,10 +49,6 @@ useHead({
     },
     {
       property: 'og:title',
-      content: pageTitle.value
-    },
-    {
-      property: 'og:description',
       content: pageTitle.value
     },
 
@@ -83,20 +81,56 @@ useHead({
     {
       name: 'msapplication-TileColor',
       content: '#ffffff'
+    },
+
+    {
+      rel: 'canonical',
+      href: window.location.href
+    },
+
+    {
+      property: 'og:url',
+      content: window.location.href
+    },
+
+    {
+      rel: 'alternate',
+      href: window.location.href
+    },
+
+    
+    {
+      property:"og:type",
+      content:"website"
+    },
+
+    {
+      property:"og:image",
+      content:"https://tema19.livedemo.com.tr/assets/seo/randevu-og.png"
+    },
+
+    {
+      property:"og:image:width",
+      content:"1200"
+    },
+
+    {
+      property:"og:image:width",
+      content:"630"
+    },
+
+    {
+      name:"twitter:card",
+      content:"summary"
     }
+
+
+
   ]
 })
 
 useSeoMeta({
-  title: pageTitle,
-  // ogTitle: () => `${data.value?.title} - My Site`,
-  // description: () => data.value?.description,
-  // ogDescription: () => data.value?.description,
-  ogImage: '/placeholder.png',
-  twitterCard: 'summary_large_image',
-  description: 'My about page',
-  ogDescription: 'Anaysafa hakkındaki açıklama',
-  ogTitle: 'Anasayfa'
+  title: pageTitle
 })
 
 watch(
