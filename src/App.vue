@@ -28,7 +28,7 @@ const pageTitle = computed(() => {
     return title.value
   } 
   else {
-    return 'Default Page Title'
+    return 'Randevu Al'
   }
 })
 
