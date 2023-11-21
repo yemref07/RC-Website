@@ -28,7 +28,7 @@
           "
         >
           <div class="">
-            <h3 style="font-size: 28px">Randevu Bilgileri</h3>
+            <h3 style="font-size: 28px">{{$t('appDetail.title')}}</h3>
 
             <img
               src="/images/randevucenter.png"
