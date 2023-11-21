@@ -1,5 +1,5 @@
 <template>
-  <component :is="dynamicWorkingHours" />
+  <component :is="dynamicGetApp" />
  </template>
  
  <script setup>
@@ -11,9 +11,9 @@
  const { theme } = storeToRefs(store)
 
  
- const dynamicWorkingHours = computed(() => {
+ const dynamicGetApp = computed(() => {
    if (theme.value) {
-     return defineAsyncComponent(() => import(`../components/${theme.value}/WorkingHoursView.vue`))
+     return defineAsyncComponent(() => import(`../components/${theme.value}/GetAppView.vue`))
    } else {
      return null
    }

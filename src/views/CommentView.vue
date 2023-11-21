@@ -1,5 +1,5 @@
 <template>
-  <component :is="dynamicWorkingHours" />
+  <component :is="dynamiComments" />
  </template>
  
  <script setup>
@@ -10,11 +10,11 @@
  const store = useThemeStore()
  const { theme } = storeToRefs(store)
 
- 
- const dynamicWorkingHours = computed(() => {
+ const dynamiComments = computed(() => {
    if (theme.value) {
-     return defineAsyncComponent(() => import(`../components/${theme.value}/WorkingHoursView.vue`))
-   } else {
+     return defineAsyncComponent(() => import(`../components/${theme.value}/CustomerCommentsView.vue`))
+   } 
+   else {
      return null
    }
  })
@@ -22,5 +22,7 @@
 
  </script>
  
- <style lang="scss" scoped></style>
+ <style scoped>
+
+</style>
  

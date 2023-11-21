@@ -1,20 +1,23 @@
 <template>
-    <div>
-        <h1>{{ data.title }}</h1>
-    </div>
+ <component :is="dynamicAbout" />
 </template>
 
 <script setup>
-import { useThemeStore } from '../stores/themeInfo';
-import {storeToRefs} from 'pinia';
+import { useThemeStore } from '../stores/themeInfo'
+import { storeToRefs } from 'pinia'
+import { computed,defineAsyncComponent } from 'vue'
 
-const store = useThemeStore();
-const {data} = storeToRefs(store);
+const store = useThemeStore()
+const { theme } = storeToRefs(store)
 
-console.log(data)
+const dynamicAbout = computed(() => {
+  if (theme.value) {
+    return defineAsyncComponent(() => import(`../components/${theme.value}/AboutView.vue`))
+  } else {
+    return null
+  }
+})
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
