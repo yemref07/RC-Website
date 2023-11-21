@@ -40,7 +40,7 @@
 
           <div class="d-flex flex-column justify-content-center align-content-center mt-4">
             <label for="" class="form-label">{{ $t('appConfirm.appConfirmCode') }}</label>
-            <input type="text" class="form-control py-2" v-model.trim="appInfo.smsverify" maxlength="6" minlength="6" />
+            <input type="text" class="form-control py-2" v-model.trim="appInfo.smsverify" maxlength="6" minlength="6" ref="smsVerify" />
 
             <div class="form-check mt-3">
               <input class="form-check-input" type="checkbox" v-model="contractApprove.c1" checked/>
@@ -122,11 +122,21 @@ const serviceStore = useServiceStore()
 const {fetchServiceData} = serviceStore
 const {services} = storeToRefs(serviceStore)
 
+const smsVerify = ref(null)
 const appInfo = ref('')
 const contractApprove = reactive({
   c1: true,
   c2: true
 })
+
+
+const focusInput = () => {
+  if(smsVerify.value){
+    smsVerify.value.focus()
+  }
+}
+
+
 
 const isAppointmentCreated = computed(() => {
   if (createAppStatus.value) {
@@ -162,6 +172,7 @@ const searchCatName = (param) => {
 }
 
 onMounted(async () => {
+  focusInput()
   await fetchServiceData()
   const getAppInfo = localStorage.getItem('appInfo')
   if (getAppInfo) {
