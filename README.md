@@ -10,7 +10,6 @@ The 'confirmed appointment' method allows users to select an appointment from av
 Contrarily, the 'Make an Appointment Fast' option allows users to request an appointment directly, requiring the business to subsequently contact the user for necessary information.
 
 Libraries Utilized:
-
 Element Plus
 vue-datepicker
 Swiper.js
