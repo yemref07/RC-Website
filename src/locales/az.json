@@ -15,6 +15,7 @@
   "message": "Mesajınız",
   "send": "Göndər",
   "companyName": "Firma adı göstərilməyib",
+  "review":"Baxış",
 
   "menu": {
       "home": "Əsas Səhifə",
@@ -127,7 +128,8 @@
 
   "sendComment": {
       "success1": "Şərhiniz uğurla göndərildi",
-      "error1": "Xahiş olunur, boş sahə qoymayın"
+      "error1": "Xahiş olunur, boş sahə qoymayın",
+      "fallback":"Hələ rəy bildirilməyib"
   },
 
   "appConfirm": {

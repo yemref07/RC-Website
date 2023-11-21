@@ -15,6 +15,7 @@
     "message": "Your Message",
     "send": "Send",
     "companyName": "Company Name Not Specified",
+    "review":"Review",
   
     "menu": {
       "home": "Home",
@@ -26,7 +27,7 @@
   
     "buttons": {
       "phone": "Phone",
-      "getApp": "Make Appointment",
+      "getApp": "Make App",
       "getAppNow": "Make Appointment Now",
       "getFastApp": "Quick Appointment",
       "sendMessage": "Send Message",
@@ -88,7 +89,8 @@
       "successMsg": "Your message has been successfully sent",
       "ok": "OK",
       "loadMore": "Load More",
-      "fallback": "No reviews have been made yet"
+      "fallback": "No reviews have been made yet",
+      "allReview":"All Review"   
     },
   
     "contact": {
@@ -126,7 +128,8 @@
   
     "sendComment": {
       "success1": "Your comment has been successfully sent",
-      "error1": "Please do not leave any fields blank"
+      "error1": "Please do not leave any fields blank",
+      "fallback":"There is no review"
     },
   
     "appConfirm": {

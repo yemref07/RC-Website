@@ -15,6 +15,7 @@
     "message":"Mesajınız",
     "send":"Gönder",
     "companyName":"Firma İsmi Belirtilmedi",
+    "review":"Yorum",
 
     "menu":{
         "home":"Anasayfa",
@@ -128,7 +129,8 @@
 
     "sendComment":{
         "success1":"Yorumunuz başarıyla gönderildi",
-        "error1":"Lütfen Boş Alan Bırakmayın"
+        "error1":"Lütfen Boş Alan Bırakmayın",
+        "fallback":"Henüz yorum yapılmamış"
     },
 
     "appConfirm":{
