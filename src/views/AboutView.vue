@@ -14,7 +14,7 @@ const dynamicAbout = computed(() => {
   if (theme.value) {
     return defineAsyncComponent(() => import(`../components/${theme.value}/AboutView.vue`))
   } else {
-    return null
+    return defineAsyncComponent(() => import(`../components/default/AboutView.vue`))
   }
 })
 

@@ -17,7 +17,7 @@ const dynamicHome = computed(() => {
   if (theme.value) {
     return defineAsyncComponent(() => import(`../components/${theme.value}/HomeView.vue`))
   } else {
-    return null
+    return defineAsyncComponent(() => import(`../components/default/HomeView.vue`))
   }
 })
 </script>

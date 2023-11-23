@@ -15,7 +15,7 @@
    if (theme.value) {
      return defineAsyncComponent(() => import(`../components/${theme.value}/GetAppView.vue`))
    } else {
-     return null
+     return defineAsyncComponent(() => import(`../components/default/GetAppView.vue`))
    }
  })
  

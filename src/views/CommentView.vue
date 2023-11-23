@@ -15,7 +15,7 @@
      return defineAsyncComponent(() => import(`../components/${theme.value}/CustomerCommentsView.vue`))
    } 
    else {
-     return null
+     return defineAsyncComponent(() => import(`../components/default/CustomerCommentsView.vue`))
    }
  })
  

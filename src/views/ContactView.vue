@@ -14,7 +14,7 @@
    if (theme.value) {
      return defineAsyncComponent(() => import(`../components/${theme.value}/ContactView.vue`))
    } else {
-     return 'default'
+     return defineAsyncComponent(() => import(`../components/default/ContactView.vue`))
    }
  })
  
