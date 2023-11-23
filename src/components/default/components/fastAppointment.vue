@@ -56,7 +56,11 @@
               class="w-100"
               size="large"
             >
-              <el-option-group v-for="group in categorizedServices" :key="group.name" :label="group.name">
+              <el-option-group
+                v-for="group in categorizedServices"
+                :key="group.name"
+                :label="group.name"
+              >
                 <el-option
                   v-for="item in group.services"
                   :key="item.id"
@@ -84,13 +88,28 @@
                 mode="international"
                 class="w-100 custom-tel-input"
                 type="tel"
-               :placeholder="$t('phone')"
+                :placeholder="$t('phone')"
                 defaultCountry="tr"
               ></vue-tel-input>
             </div>
           </div>
         </div>
-        <button class="btn btn-primary w-100 text-center" type="primary" @click="sendAppData">
+        <vue-recaptcha
+          class="mb-4"
+          ref="recaptcha"
+          v-show="showRecaptcha"
+          sitekey="6LfO5t4nAAAAACuI0Vdrb6wxs8REsyWvMzTnqBNL"
+          size="normal"
+          theme="light"
+          hl="tr"
+          :loading-timeout="loadingTimeout"
+          @verify="recaptchaVerified"
+          @expire="recaptchaExpired"
+          @fail="recaptchaFailed"
+          @error="recaptchaError"
+        >
+        </vue-recaptcha>
+        <button class="btn btn-primary w-100 text-center" :disabled="!recaptchaStatus"  type="primary" @click="sendAppData">
           <Icon icon="majesticons:send-line" width="20" height="20" color="white" class="me-1" />
           {{ $t('buttons.getApp') }}
         </button>
@@ -102,24 +121,25 @@
 <script setup>
 import { ref, reactive, computed } from 'vue'
 import { useAppointmentStore } from '../../../stores/appointment'
-import {useServiceStore} from '../../../stores/service'
+import { useServiceStore } from '../../../stores/service'
 import { Icon } from '@iconify/vue'
 import { storeToRefs } from 'pinia'
-import { User, Calendar, Promotion} from '@element-plus/icons-vue'
+import { User, Calendar, Promotion } from '@element-plus/icons-vue'
 import Swal from 'sweetalert2'
 import { useI18n } from 'vue-i18n'
+import vueRecaptcha from 'vue3-recaptcha2'
 
 const appStore = useAppointmentStore()
-const {  getFastApp,setFalseFastAppStat ,closeFastAppModal } = appStore
+const { getFastApp, setFalseFastAppStat, closeFastAppModal } = appStore
 const { createFastAppStat, isVisibleFastAppMdl } = storeToRefs(appStore)
 
 const serviceStore = useServiceStore()
-const {services} = storeToRefs(serviceStore)
+const { services } = storeToRefs(serviceStore)
 
 const selectedDate = ref('')
 const isValid = ref(false)
 
-const { t:$t } = useI18n() 
+const { t: $t } = useI18n()
 
 const appointment = reactive({
   date_at: '',
@@ -152,7 +172,6 @@ const format = (date) => {
   selectedDate.value = `${day}/${month}/${year} - ${hour}:${min}`
   return `${day}/${month}/${year}`
 }
-
 
 const showError = (param) => {
   Swal.fire({
@@ -220,10 +239,30 @@ const sendAppData = async () => {
   if (createFastAppStat.value) {
     clearInputs()
     showSuccess($t('fastApp.success1'))
-    closeFastAppModal() 
+    closeFastAppModal()
     setFalseFastAppStat()
     isValid.value = false
   }
+}
+
+const recaptcha = ref(null)
+const recaptchaStatus = ref(false)
+
+const showRecaptcha = ref(true)
+const loadingTimeout = ref(30000)
+
+const recaptchaVerified = (response) => {
+  recaptchaStatus.value = true
+}
+const recaptchaExpired = () => {
+  recaptchaStatus.value = false
+}
+const recaptchaFailed = () => {
+  recaptchaStatus.value = false
+}
+const recaptchaError = (reason) => {
+  recaptchaStatus.value = false
+  console.error(reason)
 }
 </script>
 
@@ -267,11 +306,11 @@ const sendAppData = async () => {
 }
 
 .custom-wrapper:hover {
-    box-shadow: 0 0 0 1px var(--el-input-hover-border-color) inset;
+  box-shadow: 0 0 0 1px var(--el-input-hover-border-color) inset;
 }
 .custom-tel-input :focus-within {
-    box-shadow: none !important;
-    border-color: blue !important;
+  box-shadow: none !important;
+  border-color: blue !important;
 }
 
 .custom-wrapper:focus-within {
