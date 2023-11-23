@@ -16,7 +16,7 @@
         </div>
         <div class="card-content">
           <iframe
-            title = "Harita"
+            title="Harita"
             class="rounded"
             :src="location"
             width="100%"
@@ -70,7 +70,7 @@
         <form class="card-content">
           <div class="row">
             <div class="col-12 col-lg-6 mt-3">
-              <label for="nameSurname" class="form-label">{{$t('nameSurname')}}</label>
+              <label for="nameSurname" class="form-label">{{ $t('nameSurname') }}</label>
               <input
                 type="text"
                 class="form-control p-2"
@@ -81,7 +81,7 @@
             </div>
 
             <div class="col-12 col-lg-6 mt-3">
-              <label for="nameSurname" class="form-label">{{$t('phone')}}</label>
+              <label for="nameSurname" class="form-label">{{ $t('phone') }}</label>
               <input
                 v-model="message.phone"
                 type="text"
@@ -89,10 +89,13 @@
                 :placeholder="$t('phone')"
                 required
               />
+              <input v-model="message.honeypot" type="text" class="d-none" />
             </div>
 
             <div class="col-12 mt-4">
-              <label for="exampleFormControlTextarea1" class="form-label">{{$t('message')}}</label>
+              <label for="exampleFormControlTextarea1" class="form-label">{{
+                $t('message')
+              }}</label>
               <textarea
                 class="form-control"
                 id="exampleFormControlTextarea1"
@@ -101,10 +104,25 @@
                 required
               ></textarea>
             </div>
-
+            
+            <vue-recaptcha
+              class='mt-4'
+              ref="recaptcha"
+              v-show="showRecaptcha"
+              sitekey="6LfO5t4nAAAAACuI0Vdrb6wxs8REsyWvMzTnqBNL"
+              size="normal"
+              theme="light"
+              hl="tr"
+              :loading-timeout="loadingTimeout"
+              @verify="recaptchaVerified"
+              @expire="recaptchaExpired"
+              @fail="recaptchaFailed"
+              @error="recaptchaError"
+            >
+            </vue-recaptcha>
             <div class="col-12 mt-4">
-              <button type="submit" @click="sendForm" class="btn btn-primary px-5 py-2">
-                {{$t('send')}}
+              <button type="submit" :disabled="!recaptchaStatus" @click="sendForm" class="btn btn-primary px-5 py-2">
+                {{ $t('send') }}
               </button>
             </div>
           </div>
@@ -112,6 +130,7 @@
       </div>
     </div>
   </div>
+  <workingHours />
 </template>
 
 <script setup>
@@ -121,14 +140,17 @@ import { storeToRefs } from 'pinia'
 import { computed, reactive, ref, watchEffect } from 'vue'
 import { useContactStore } from '../../stores/contact'
 import pageHeader from './components/pageHeader.vue'
+import workingHours from './components/workingHours.vue'
+import vueRecaptcha from 'vue3-recaptcha2';
+
 import Swal from 'sweetalert2'
-import {useI18n} from 'vue-i18n'
+import { useI18n } from 'vue-i18n'
 
-const {t:$t} = useI18n()
+const { t: $t } = useI18n()
 
-const contactStore = useContactStore();
-const {errorMsg2,isSend} = storeToRefs( contactStore);
-const {sendData} = contactStore
+const contactStore = useContactStore()
+const { errorMsg2, isSend } = storeToRefs(contactStore)
+const { sendData } = contactStore
 
 const store = useThemeStore()
 const { data } = storeToRefs(store)
@@ -138,7 +160,8 @@ const isValid = ref(false)
 const message = reactive({
   nameSurname: '',
   phone: '',
-  comment: ''
+  comment: '',
+  honeypot: ''
 })
 
 const lat = computed(() => {
@@ -160,7 +183,7 @@ const lng = computed(() => {
 const contactInfo = computed(() => {
   if (data.value) {
     return {
-      companyName:data.value.title,
+      companyName: data.value.title,
       phone: data.value.phone,
       wp: data.value.whatsapp,
       email: data.value.email,
@@ -176,28 +199,53 @@ const location = computed(() => {
 })
 
 
+const recaptcha = ref(null)
+const recaptchaStatus = ref(false)
+
+const showRecaptcha = ref(true)
+const	loadingTimeout = ref(30000)
+
+const recaptchaVerified = (response) => {
+  recaptchaStatus.value = true
+}
+const recaptchaExpired = () => {
+  recaptchaStatus.value = false
+}
+const recaptchaFailed = () => {
+  recaptchaStatus.value = false
+}
+const recaptchaError = (reason) => {
+  recaptchaStatus.value = false
+  console.error(reason)
+}
+
+
+
+
+
+
+
+
+
 const showError = (param) => {
-    Swal.fire({
+  Swal.fire({
     title: $t('error'),
     text: param,
     icon: 'error',
     confirmButtonText: $t('ok'),
-    customClass:{
-      popup:"index-99"
+    customClass: {
+      popup: 'index-99'
     }
   })
-
 }
 
 const showSuccess = () => {
-    Swal.fire({
+  Swal.fire({
     title: $t('success'),
     text: $t('contact.success1'),
     icon: 'success',
-   confirmButtonText: $t('ok')
+    confirmButtonText: $t('ok')
   })
-
-
 }
 
 watchEffect(() => {
@@ -219,14 +267,14 @@ const checkValidation = () => {
     isValid.value = true
   } else {
     isValid.value = false
-    showError( $t('contact.error1') )
+    showError($t('contact.error1'))
   }
 }
 
 const sendForm = async (e) => {
   e.preventDefault()
   checkValidation()
-  if (isValid.value) {
+  if (isValid.value && message.honeypot === '') {
     await sendData(message)
     message.nameSurname = ''
     message.phone = ''
@@ -234,8 +282,6 @@ const sendForm = async (e) => {
   }
   isSend.value = false
 }
-
-
 </script>
 
 <style scoped>
