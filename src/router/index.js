@@ -9,11 +9,7 @@ const router = createRouter({
       name: 'anasayfa',
       component: HomeView
     },
-    {
-      path: '/calisma-saatleri',
-      name: 'calismaSaatleri',
-      component: () => import('../views/WorkingHours.vue')
-    },
+
     {
       path: '/musteri-yorumlari',
       name: 'müsteriYorumlari',
@@ -44,6 +40,31 @@ const router = createRouter({
       name: 'iletisim',
       component: () => import('../views/ContactView.vue')
     },
+
+    {
+      path:'/blog',
+      name:'blog',
+      component:()=>import('../views/BlogView.vue')
+    },
+
+    {
+      path:'/foto-galeri',
+      name:'fotoGaleri',
+      component:()=>import('../views/PhotoGalleryView.vue')
+    },
+
+    {
+      path:"/video-galeri",
+      name:"videoGaleri",
+      component:()=>import('../views/VideoGalleryView.vue')
+    },
+
+    {
+      path: '/uzmanlarimiz',
+      name: 'uzmanlarimiz',
+      component: () => import('../views/EmployeeView.vue')
+    },
+
 
     {
       path: '/404',
