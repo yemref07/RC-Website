@@ -32,8 +32,14 @@
           </li>
 
           <li class="menu-item">
-            <router-link to="/calisma-saatleri" :title="$t('menu.workHours')">{{
-              $t('menu.workHours')
+            <router-link to="/blog" :title="$t('menu.blog')">{{
+              $t('menu.blog')
+            }}</router-link>
+          </li>
+
+          <li class="menu-item">
+            <router-link to="/foto-galeri" :title="$t('menu.workHours')">{{
+              $t('menu.photoGallery')
             }}</router-link>
           </li>
 
